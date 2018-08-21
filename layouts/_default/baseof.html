@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {{ partial "head.html" . }}
+
+  {{ if .Site.IsServer }}
+  {{ $cssOpts := (dict "enableSourceMap" true ) }}
+  {{ $styles := resources.Get "styles/main.scss" | toCSS $cssOpts }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+  {{ else }}
+  {{ $styles := resources.Get "styles/main.scss" | toCSS | minify }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+  {{ end }}
+
+  {{ $app := resources.Get "scripts/app.js" }}
+  {{ $scripts := slice $app | resources.Concat "scripts/main.js" | minify }}
+
+</head>
+	<body>
+
+    <div class="container">
+      {{ partial "navbar.html" . }}
+      <div class="content">{{ block "main" . }} {{ end }}</div>
+      <footer class="footer">{{ partial "footer.html" . }}</footer>
+    </div>
+
+    <script src="{{ $scripts.RelPermalink }}"></script>
+	</body>
+</html>

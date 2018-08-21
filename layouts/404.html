@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<section class="pace-hero pace-background-primary py-6">
+    <div class=container>
+      <div class="row justify-content-around">
+        <div class="col-md-12 text-center">
+          <h1 class="pace-title">
+            {{ .Site.Params.error }}
+          </h1>
+        </div>
+      </div>
+    </div>
+</section>
+
+{{ partial "information.html" . }}
+
+{{ end }}

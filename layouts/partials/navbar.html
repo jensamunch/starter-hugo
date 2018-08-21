@@ -1,0 +1,26 @@
+<nav class="navbar">
+
+  <ul id="left-nav">
+    <li>
+      <a class="logo" href="{{ .Site.LanguagePrefix }}/"><strong>pace.travel</strong></a>
+    </li>
+    <li id="navbar-toggle">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </li>
+  </ul>
+
+  <ul id="main-nav">
+    <li>
+      <a class="nav-links" href="{{ .Site.LanguagePrefix }}/why-pace/">
+          {{ .Site.Params.navWhy }}
+        </a>
+    </li>
+    <li>
+      <a class="nav-links" href="{{ .Site.LanguagePrefix }}/blog/">
+          {{ .Site.Params.navBlog }}
+          </a>
+    </li>
+  </ul>
+</nav>

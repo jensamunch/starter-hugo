@@ -1,0 +1,35 @@
+<section class="partners my-5">
+  <h1 class="text-center pace-headline">{{ .Site.Params.partners }}</h1>
+
+<div class="flex-grid-four align-items-center">
+  <div class="col">
+    <a href="https://www.mewssystems.com/" target="_blank">
+          {{ $img := (resources.Get "images/partners/mews.png") }}
+          <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}">
+        </a>
+  </div>
+
+  <div class="col">
+    <a href="https://www.siteminder.com/siteminder-exchange/" target="_blank">
+          {{ $img := (resources.Get "images/partners/siteminder.png") }}
+          <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}">
+        </a>
+  </div>
+
+  <div class="col">
+    <a href="https://www.oracle.com/uk/industries/hospitality/products/opera-property-services/index.html" target="_blank">
+          {{ $img := (resources.Get "images/partners/oracle.png") }}
+          <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}">
+        </a>
+  </div>
+
+  <div class="col">
+    <a href="https://www.protel.io/" target="_blank">
+          {{ $img := (resources.Get "images/partners/protel.png") }}
+          <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}">
+        </a>
+  </div>
+
+</div>
+
+</section>

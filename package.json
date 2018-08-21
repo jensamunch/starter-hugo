@@ -1,0 +1,14 @@
+{
+  "name": "hugo-pace",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/findpace/www.paceup.com"
+  },
+  "scripts": {},
+  "devDependencies": {},
+  "dependencies": {
+    "scrollreveal": "^3.4.0"
+  }
+}

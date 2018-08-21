@@ -1,0 +1,38 @@
+<section class="pace-testimonials py-6 pace-background purple-bottom-to-top">
+  <div class="container">
+
+    <div class="row justify-content-center">
+      <h1 class="text-center pace-headline">{{ .Site.Params.customersTitle }}</h1>
+    </div>
+
+    <div class="pace-carousel">
+      {{ $headless := .Site.GetPage "page" "testimonials" }}
+      {{ $services := $headless.Resources.Match "**" }}
+      {{ range $services }}
+
+      <div class="card p-3 m-2">
+        <div class="pace-header align-items-center text-center">
+
+          {{ with .Params.cover }}
+            {{ $original := resources.Get .  }}
+            {{ $coverScaled := $original.Fill "100x100"  }}
+
+                <div class="col-auto">
+                  <img class="m-3 mx-auto img-fluid pace-circle" src="{{ $coverScaled.RelPermalink }}" width="{{ $coverScaled.Width }}" height="{{ $coverScaled.Height }}">
+                </div>
+
+          {{ end }}
+
+        </div>
+        <div class="pace-footer">
+          <p class="mb-0 text-center"><strong>{{ .Params.emotionAuthor }} </strong></p>
+          <p class="text-center"><strong>{{ .Params.emotionHotel }} </strong></p>
+          <p> {{ .Params.emotion }}</p>
+        </div>
+      </div>
+
+      {{ end }}
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,20 @@
+<section class="hero my-5">
+
+<div class="row">
+  <div class="column">
+      <h1 class="pace-title text-center">
+            {{ .Params.heroTitle }}
+           </h1>
+      <p class="mt-3 lead">
+        {{ .Params.heroSub }}
+      </p>
+      <strong>
+          <a class="btn btn-primary btn-lg pace-btn my-2" href="{{ .Site.LanguagePrefix }}/get-in-touch/" role="button">{{ .Site.Params.navTry }}</a>
+          </strong>
+      <p>
+        {{ .Params.heroAlready }}<a href="http://app.paceup.com">{{ .Params.heroSignin }}</a>
+      </p>
+  </div>
+</div>
+
+</section>

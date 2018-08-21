@@ -1,0 +1,45 @@
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+[imaging]
+# Default resample filter used for resizing. Default is Box,
+# a simple and fast averaging filter appropriate for downscaling.
+# See https://github.com/disintegration/imaging
+resampleFilter = "box"
+# JPEG quality setting. Default is 75.
+quality = 75
+
+[params]
+brand = "pace.travel"
+paceEmail = "contact@paceup.com"
+
+[taxonomies]
+tag = "tags"
+
+[languages]
+
+[languages.en]
+weight = 1.0
+error = "Sorry nothing to see here"
+navLanguage = "Language"
+navWhy = "Why Pace?"
+navAbout = "About"
+navAdvisors = "Revenue Strategists"
+navBlog = "Blog"
+navTry = "Get in touch"
+navSignin = "Sign in"
+Hiring = "We're hiring!"
+manage = "Subscription"
+faq = "FAQ"
+glossary = "Glossary"
+
+copyright = "Prix Ltd. 2018"
+terms = "Terms & Conditions"
+policy = "Privacy Policy"
+company = "Company"
+career = "Career"
+contact = "Contact"
+product = "Product"
+blog = "Recent Posts"
+
+partners = "Integrations with industry leaders"

@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<title>{{.Title }}</title>
+<meta name="description" content="{{.Params.metadescription}}">
+<meta name="keywords" content="{{.Params.metakeywords}}">
+<link rel="canonical" href="{{ .Permalink }}" />
+
+{{ if .IsTranslated }} {{ range .Translations }}
+<link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
+{{ end}} {{ end }}
+<link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}" />
+
+{{ $page := . }}
+{{ with $page.Params.cover }}
+  {{ $page.Scratch.Set "original" . }}
+  {{ with $page.Site.GetPage "page" "images" }}
+    {{ with .Resources.GetMatch ($page.Scratch.Get "original") }}
+      {{ $scaled := .Fill "1500x500 Center" }}
+      {{ $page.Scratch.Set "image" $scaled }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $image := $page.Scratch.Get "image" }}
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="{{ .Site.Params.twitterHandle }}" />
+<meta name="twitter:creator" content="{{ .Site.Params.twitterHandle }}" />
+
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:title" content="{{.Title }} | {{ .Site.Params.brand }}" />
+<meta property="og:description" content="{{ .Params.metadescription }}" />
+<meta property="og:image" content="{{ $image.Permalink }}" />
+<meta property="og:image:width" content="{{ $image.Width }}" />
+<meta property="og:image:height" content="{{ $image.Width }}" />

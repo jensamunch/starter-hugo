@@ -1,0 +1,45 @@
+<section class="information my-5">
+  <div class="flex-grid-four">
+
+    <div class="col">
+      <ul>
+        <h5 class="text-uppercase">{{ .Site.Params.company }}</h5>
+        <li><a class="pace-link" href="{{ .Site.LanguagePrefix }}/about/">{{ .Site.Params.navAbout}}</a></li>
+        <li><a class="pace-link" href="{{ .Site.LanguagePrefix }}/why-pace/">{{ .Site.Params.navWhy }}</a></li>
+        <li><a class="pace-link" href="{{ .Site.LanguagePrefix }}/hiring/">{{ .Site.Params.Hiring}}</a></li>
+        <li><a class="pace-link" href="{{ .Site.LanguagePrefix }}/contact/">{{ .Site.Params.contact}}</a></li>
+      </ul>
+    </div>
+
+    <div class="col">
+      <ul>
+        <h5 class="text-uppercase">{{ .Site.Params.product}}</h5>
+        <li><a class="pace-link" href="{{ .Site.LanguagePrefix }}/get-in-touch/">{{ .Site.Params.navTry}}</a></li>
+        <li><a class="pace-link" href="{{ .Site.LanguagePrefix }}/onboarding/">{{ .Site.Params.manage }}</a></li>
+        <li><a class="pace-link" href="https://app.paceup.com" target="_blank">{{ .Site.Params.navSignIn}}</a></li>
+      </ul>
+    </div>
+
+    <div class="col">
+      <ul>
+        <h5 class="text-uppercase">{{ .Site.Params.blog }}</h5> {{ range first 4 ( where .Site.RegularPages "Section" "blog" ) }}
+        <li><a class="pace-link" href="{{ .Permalink }}">{{ .Params.title }}</a></li> {{ end }}
+      </ul>
+    </div>
+
+    <div class="col">
+      <ul>
+        <li><a class="pace-link" href="https://twitter.com/findpace/" rel="external" target="_blank">
+              <svg class="mr-1" width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:#333333}</style></defs><title>twitter_logo</title><path class="cls-1" d="M25 0a25 25 0 1 0 25 25A25 25 0 0 0 25 0zm12.06 18.8v.8c0 8.13-6.19 17.51-17.51 17.51a17.42 17.42 0 0 1-9.43-2.77 12.56 12.56 0 0 0 1.47.09 12.35 12.35 0 0 0 7.64-2.63 6.16 6.16 0 0 1-5.75-4.27 6.17 6.17 0 0 0 2.78-.11 6.16 6.16 0 0 1-4.94-6v-.08a6.13 6.13 0 0 0 2.79.77 6.16 6.16 0 0 1-1.9-8.22 17.47 17.47 0 0 0 12.69 6.43 6.16 6.16 0 0 1 10.5-5.65 12.33 12.33 0 0 0 3.91-1.49 6.17 6.17 0 0 1-2.71 3.41 12.3 12.3 0 0 0 3.53-1 12.51 12.51 0 0 1-3.07 3.21z"/></svg>
+            </a></li>
+        <li><a class="pace-link" href="https://www.linkedin.com/company/findpace/" rel="external" target="_blank">
+              <svg class="mr-1" width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:#333333}</style></defs><title>linkedin_logo</title><path class="cls-1" d="M25 0a25 25 0 1 0 25 25A25 25 0 0 0 25 0zm-6.47 36.43h-5.34V19.25h5.34zM15.86 16.9A3.1 3.1 0 1 1 19 13.81a3.1 3.1 0 0 1-3.14 3.09zm22.67 19.53h-5.34v-8.35c0-2 0-4.56-2.77-4.56s-3.2 2.17-3.2 4.41v8.5h-5.34V19.25H27v2.35h.07a5.61 5.61 0 0 1 5.05-2.77c5.41 0 6.41 3.56 6.41 8.18z"/></svg>
+            </a></li>
+        <li><a class="pace-link" href="https://www.facebook.com/FindPace/" rel="external" target="_blank">
+              <svg class="mr-1" width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:#333333}</style></defs><title>facebook_logo</title><path class="cls-1" d="M25 0a25 25 0 1 0 25 25A25 25 0 0 0 25 0zm8.38 14.07h-3.3c-2.58 0-3.08 1.23-3.08 3v4h6.16l-.8 6.22H27v16h-6.42v-16h-5.37v-6.22h5.37v-4.58c0-5.32 3.25-8.22 8-8.22a44.05 44.05 0 0 1 4.8.25z"/></svg>
+            </a></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
