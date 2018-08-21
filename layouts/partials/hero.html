@@ -1,7 +1,13 @@
 <section class="hero my-5">
 
-<div class="row">
-  <div class="column">
+  <div class="flex-grid-two">
+    <div class="col">
+      <h1 class="pace-title text-center">
+            COLUMN 1
+           </h1>
+    </div>
+
+    <div class="col">
       <h1 class="pace-title text-center">
             {{ .Params.heroTitle }}
            </h1>
@@ -14,7 +20,7 @@
       <p>
         {{ .Params.heroAlready }}<a href="http://app.paceup.com">{{ .Params.heroSignin }}</a>
       </p>
+    </div>
   </div>
-</div>
 
 </section>

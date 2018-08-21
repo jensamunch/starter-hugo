@@ -338,6 +338,9 @@ body {
       width: 100%;
       margin: 0 0 10px; } }
 
+.justify-content-start {
+  justify-content: flex-start; }
+
 .align-items-start {
   align-items: start; }
 
@@ -666,7 +669,10 @@ blockquote {
   margin-bottom: 1.563rem; }
 
 div, .nav-links, .logo, a {
-  border: 0px #dc3545 solid; }
+  border: 1px #dc3545 solid; }
+
+.information ul {
+  padding: 0; }
 
 .information li {
   list-style: none; }

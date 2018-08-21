@@ -1,8 +1,11 @@
 div, .nav-links, .logo, a {
-  border: 0px $red solid;
+  border: 1px $red solid;
 }
 
 .information {
+  ul {
+    padding: 0;
+  }
   li {
     list-style: none;
   }
