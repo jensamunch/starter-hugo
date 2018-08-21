@@ -8,7 +8,5 @@
   },
   "scripts": {},
   "devDependencies": {},
-  "dependencies": {
-    "scrollreveal": "^3.4.0"
-  }
+  "dependencies": {}
 }
