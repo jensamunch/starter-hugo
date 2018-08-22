@@ -713,7 +713,10 @@ blockquote {
 .nav-links,
 a,
 div {
-  border: 0 #dc3545 solid; }
+  border: 0px #dc3545 solid; }
+
+section {
+  margin: 5rem 0 5rem; }
 
 .information ul {
   padding: 0; }

@@ -1,83 +1,40 @@
-<section class="why-pace my-3">
+<section class="why-pace">
 
   <div class="flex-grid-two pace-appear">
     <div class="col">
-      <div class="m-3">
-        {{ $img := (resources.Get "images/features/feature-1.png") }}
-        <img class="img-fluid pace-feature" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}">
-      </div>
+      {{ $img := (resources.Get "images/features/feature-1.png") }}
+      <img class="img-fluid pace-feature" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}">
     </div>
-
     <div class="col">
-      <div class="h-100 d-flex align-items-center">
-        <div class="m-3">
-          <h2>{{ .Params.reason1Title }}</h2> {{ with .Params.reason1Text }}
-          <p class="lead">{{ . | markdownify }}</p>
-          {{ end }}
-
-        </div>
-      </div>
+        <h2>{{ .Params.reason1Title }}</h2> {{ with .Params.reason1Text }}
+        <p class="lead">{{ . | markdownify }}</p>
+        {{ end }}
     </div>
   </div>
 
   <div class="flex-grid-two pace-appear">
     <div class="col">
-      <div class="m-3">
-        {{ $img := (resources.Get "images/features/feature-2.png") }}
-        <img class="img-fluid pace-feature" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}">
-      </div>
+      {{ $img := (resources.Get "images/features/feature-1.png") }}
+      <img class="img-fluid pace-feature" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}">
     </div>
-
     <div class="col">
-      <div class="h-100 d-flex align-items-center">
-        <div class="m-3">
-          <h2>{{ .Params.reason2Title }}</h2> {{ with .Params.reason2Text }}
-          <p class="lead">{{ . | markdownify }}</p>
-          {{ end }}
-
-        </div>
-      </div>
+        <h2>{{ .Params.reason1Title }}</h2> {{ with .Params.reason1Text }}
+        <p class="lead">{{ . | markdownify }}</p>
+        {{ end }}
     </div>
   </div>
 
   <div class="flex-grid-two pace-appear">
     <div class="col">
-      <div class="m-3">
-        {{ $img := (resources.Get "images/features/feature-3.png") }}
-        <img class="img-fluid pace-feature" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}">
-      </div>
+      {{ $img := (resources.Get "images/features/feature-1.png") }}
+      <img class="img-fluid pace-feature" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}">
     </div>
-
     <div class="col">
-      <div class="h-100 d-flex align-items-center">
-        <div class="m-3">
-          <h2>{{ .Params.reason3Title }}</h2> {{ with .Params.reason3Text }}
-          <p class="lead">{{ . | markdownify }}</p>
-          {{ end }}
-
-        </div>
-      </div>
+        <h2>{{ .Params.reason1Title }}</h2> {{ with .Params.reason1Text }}
+        <p class="lead">{{ . | markdownify }}</p>
+        {{ end }}
     </div>
   </div>
 
-  <div class="flex-grid-two pace-appear">
-    <div class="col">
-      <div class="m-3">
-        {{ $img := (resources.Get "images/features/feature-4.png") }}
-        <img class="img-fluid pace-feature" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}">
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="h-100 d-flex align-items-center">
-        <div class="m-3">
-          <h2>{{ .Params.reason4Title }}</h2> {{ with .Params.reason4Text }}
-          <p class="lead">{{ . | markdownify }}</p>
-          {{ end }}
-
-        </div>
-      </div>
-    </div>
-  </div>
 
 </section>

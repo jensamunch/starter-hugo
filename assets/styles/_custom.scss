@@ -2,7 +2,11 @@
 .nav-links,
 a,
 div {
-  border: 0 $red solid;
+  border: 0px $red solid;
+}
+
+section {
+ margin: 5rem 0 5rem;
 }
 
 .information {
