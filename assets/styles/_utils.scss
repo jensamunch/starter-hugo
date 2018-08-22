@@ -30,8 +30,9 @@ $spacers: map-merge(
     1: ($spacer * 1),
     2: ($spacer * 2),
     3: ($spacer * 3),
-    4: ($spacer * 4),
-    5: ($spacer * 5)
+    4: ($spacer * 5),
+    5: ($spacer * 8),
+    6: ($spacer * 13),
   ),
   $spacers
 );

@@ -1,11 +1,15 @@
-div, .nav-links, .logo, a {
-  border: 1px $red solid;
+.logo,
+.nav-links,
+a,
+div {
+  border: 0 $red solid;
 }
 
 .information {
   ul {
     padding: 0;
   }
+
   li {
     list-style: none;
   }
@@ -13,4 +17,15 @@ div, .nav-links, .logo, a {
 
 .text-center {
   text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.blog-content {
+  @media (min-width: 768px) {
+    padding: 0 13rem 0;
+  }
 }
