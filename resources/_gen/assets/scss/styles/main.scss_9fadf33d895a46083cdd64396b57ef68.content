@@ -345,9 +345,14 @@
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 98%;
-  padding: 0.5rem 1% 0.5rem;
+  min-width: 100%;
   background: white; }
+  .navbar #left-nav {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+  .navbar #navbar-toggle, .navbar li {
+    padding-left: 1rem;
+    padding-right: 1rem; }
   .navbar li {
     list-style-type: none; }
   .navbar ul {
@@ -359,10 +364,11 @@
       text-decoration: none; }
 
 @media screen and (max-width: 768px) {
+  .navbar {
+    border-bottom: 1px solid #e9ecef; }
   #left-nav {
     display: flex;
-    flex-direction: row;
-    border-bottom: 1px solid #e9ecef; }
+    flex-direction: row; }
     #left-nav #navbar-toggle {
       margin-left: auto;
       margin-top: 0.45rem; }
@@ -370,9 +376,7 @@
     display: none;
     flex-direction: column;
     padding: 1rem 0rem 1rem;
-    background: #f8f9fa; }
-    #main-nav li {
-      padding-left: 1rem; } }
+    background: #f8f9fa; } }
 
 @media screen and (min-width: 768px) {
   .navbar {
@@ -383,7 +387,7 @@
     flex-direction: row;
     margin-left: auto; }
     #main-nav li {
-      padding: 0 1rem 0; }
+      padding-right: 5rem; }
   #navbar-toggle {
     display: none; } }
 
