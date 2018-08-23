@@ -2,23 +2,21 @@
 
 <section class="blog-list">
 
-  <div class="flex-grid">
+  <div class="row">
     {{ range first 20 .Pages }}
-    <div class="col">
-      <a href="{{ .Permalink }}">
+    <div class="col-md-3">
       {{ with .Params.cover }}
         {{ $original := resources.Get .  }}
         {{ $coverScaled := $original.Fill "350x200 center"  }}
       <img src="{{ $coverScaled.RelPermalink }}" width="{{ $coverScaled.Width }}" height="{{ $coverScaled.Height }}">
       {{ end }}
       <strong>{{ .Params.author }}</strong><br> {{ dateFormat "January 02, 2006" .Params.date }}
-      <h2>{{ .Title }}</h2>
+      <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
       <p>{{ .Params.metadescription | truncate 200 }}...</p>
-      </a>
     </div>
     {{ end }}
   </div>
-  
+
 </section>
 
 {{ partial "information.html" . }} {{ end }}

@@ -1,7 +1,7 @@
-<section class="information my-5">
-  <div class="flex-grid-four">
+<section class="section-information my-5">
+  <div class="row">
 
-    <div class="col">
+    <div class="col-xs-6 col-md-3">
       <ul>
         <h5 class="text-uppercase">{{ .Site.Params.company }}</h5>
         <li><a class="pace-link" href="{{ .Site.LanguagePrefix }}/about/">{{ .Site.Params.navAbout}}</a></li>
@@ -11,7 +11,7 @@
       </ul>
     </div>
 
-    <div class="col">
+    <div class="col-xs-6 col-md-3">
       <ul>
         <h5 class="text-uppercase">{{ .Site.Params.product}}</h5>
         <li><a class="pace-link" href="{{ .Site.LanguagePrefix }}/get-in-touch/">{{ .Site.Params.navTry}}</a></li>
@@ -20,14 +20,14 @@
       </ul>
     </div>
 
-    <div class="col">
+    <div class="col-xs-6 col-md-3">
       <ul>
         <h5 class="text-uppercase">{{ .Site.Params.blog }}</h5> {{ range first 4 ( where .Site.RegularPages "Section" "blog" ) }}
         <li><a class="pace-link" href="{{ .Permalink }}">{{ .Params.title }}</a></li> {{ end }}
       </ul>
     </div>
 
-    <div class="col">
+    <div class="col-xs-6 col-md-3">
       <ul>
         <a class="mr-1" href="https://twitter.com/findpace/" rel="external" target="_blank"><i class="fab fa-3x fa-twitter-square"></i></a>
         <a class="mr-1" href="https://www.linkedin.com/company/findpace/" rel="external" target="_blank"><i class="fab fa-3x fa-linkedin"></i></a>
