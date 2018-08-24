@@ -405,9 +405,10 @@
   #main-nav {
     display: flex;
     flex-direction: row;
-    margin-left: auto; }
+    margin-left: auto;
+    padding-right: 3rem; }
     #main-nav li {
-      padding-right: 5rem; }
+      padding-right: 2rem; }
   #navbar-toggle {
     display: none; } }
 
@@ -1553,7 +1554,7 @@ body {
   font-size: 1.5rem; }
 
 section {
-  margin: 5rem 0 5rem; }
+  margin-bottom: 5rem; }
 
 .section-information ul {
   padding: 0; }
