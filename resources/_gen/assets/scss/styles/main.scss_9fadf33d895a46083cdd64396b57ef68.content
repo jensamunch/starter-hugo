@@ -341,7 +341,23 @@
 .px-8 {
   padding-left: 13rem !important; }
 
+@font-face {
+  font-family: 'Avenir';
+  font-weight: normal;
+  src: url("/fonts/364E28_0_0.woff2") format("woff2"); }
+
+@font-face {
+  font-family: 'Avenir';
+  font-style: italic;
+  src: url("/fonts/364E28_1_0.woff2") format("woff2"); }
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: bold;
+  src: url("/fonts/364E28_3_0.woff2") format("woff2"); }
+
 .navbar {
+  z-index: 9999999;
   position: fixed;
   top: 0;
   left: 0;
@@ -350,14 +366,15 @@
   .navbar #left-nav {
     padding-top: 1rem;
     padding-bottom: 1rem; }
-  .navbar #navbar-toggle, .navbar li {
+  .navbar #navbar-toggle,
+  .navbar li {
     padding-left: 1rem;
     padding-right: 1rem; }
   .navbar li {
     list-style-type: none; }
   .navbar ul {
-    margin: 0px;
-    padding: 0px; }
+    margin: 0;
+    padding: 0; }
   .navbar a {
     text-decoration: none; }
     .navbar a:hover {
@@ -375,8 +392,11 @@
   #main-nav {
     display: none;
     flex-direction: column;
-    padding: 1rem 0rem 1rem;
-    background: #f8f9fa; } }
+    padding: 1rem 0;
+    background: #f8f9fa; }
+    #main-nav li {
+      margin-top: 1rem;
+      margin-bottom: 1rem; } }
 
 @media screen and (min-width: 768px) {
   .navbar {
@@ -1140,7 +1160,7 @@ html {
   font-size: 100%; }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+  font-family: Avenir, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
   background-color: white;
   font-weight: 400;
   line-height: 1.563;
@@ -1439,11 +1459,95 @@ blockquote {
   padding: 0 1rem;
   margin-bottom: 1.563rem; }
 
+.macbook {
+  padding: 10px;
+  max-width: 800px; }
+
+.screen {
+  background: #000;
+  border-radius: 3% 3% 0.5% 0.5% / 5%;
+  margin: 0 auto;
+  /* for aspect ratio */
+  position: relative;
+  width: 80%; }
+
+.screen:before {
+  border: 2px solid #cacacc;
+  border-radius: 3% 3% 0.5% 0.5% / 5%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.8) inset, 0 0 1px 2px rgba(255, 255, 255, 0.3) inset;
+  content: "";
+  display: block;
+  /* for aspect ratio ~67:100 */
+  padding-top: 67%; }
+
+.screen:after {
+  content: "";
+  border-top: 2px solid rgba(255, 255, 255, 0.15);
+  position: absolute;
+  bottom: 0.75%;
+  left: 0.5%;
+  padding-top: 1%;
+  width: 99%; }
+
+.viewport {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 4.3% 3.2%;
+  background-image: url("/images/dashboard.png");
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.base {
+  /* for aspect ratio */
+  position: relative;
+  width: 100%; }
+
+.base:before {
+  content: "";
+  display: block;
+  /* for aspect ratio ~33:1000*/
+  padding-top: 3.3%;
+  /* stylin */
+  background: linear-gradient(#eaeced, #edeef0 55%, #fff 55%, #8a8b8f 56%, #999ba0 61%, #4B4B4F 84%, #262627 89%, rgba(0, 0, 0, 0.01) 98%);
+  border-radius: 0 0 10% 10%/ 0 0 50% 50%; }
+
+.base::after {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.8) 0.5%, rgba(0, 0, 0, 0.4) 3.3%, transparent 15%, rgba(255, 255, 255, 0.8) 50%, transparent 85%, rgba(0, 0, 0, 0.4) 96.7%, rgba(255, 255, 255, 0.8) 99.5%, rgba(0, 0, 0, 0.5) 100%);
+  content: "";
+  height: 53%;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
+.notch {
+  background: #ddd;
+  border-radius: 0 0 7% 7% / 0 0 95% 95%;
+  box-shadow: -5px -1px 3px rgba(0, 0, 0, 0.2) inset, 5px -1px 3px rgba(0, 0, 0, 0.2) inset;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -3.5%;
+  z-index: 2;
+  /* for aspect ratio */
+  position: relative;
+  width: 14%; }
+
+.notch:before {
+  content: "";
+  display: block;
+  /* for aspect ratio ~1:10 */
+  padding-top: 10%; }
+
 .logo,
 .nav-links,
 a,
 div {
   border: 0px #dc3545 solid; }
+
+body {
+  padding-top: 71px; }
 
 .logo {
   font-size: 1.5rem; }
